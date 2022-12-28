@@ -67,6 +67,7 @@ figure {
   display: inline-block;
 }
 
+
 /* scrollbar */
 *::-webkit-scrollbar {
   width: 5px;
