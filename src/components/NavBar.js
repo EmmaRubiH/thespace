@@ -11,6 +11,7 @@ import axios from "axios";
 import useClickOutsideToggle from "../hooks/useClickOutsideToggle";
 import { removeTokenTimestamp } from "../utils/utils";
 
+
 const NavBar = () => {
     const currentUser = useCurrentUser();
     const setCurrentUser = useSetCurrentUser();
@@ -90,11 +91,17 @@ const NavBar = () => {
     return (
         <Navbar expanded={expanded} className={styles.NavBar} expand="md" fixed="top">
             <Container>
+                
+                    
                 <NavLink to="/">
                     <Navbar.Brand>
                         <img src={logoems} alt="logo" height="45" />
+                        
                     </Navbar.Brand>
-                </NavLink>
+                    </NavLink>
+                   
+                
+                
                 {currentUser && addPostIcon}
                 <Navbar.Toggle 
                     ref={ref}
@@ -114,6 +121,7 @@ const NavBar = () => {
 
                     </Nav>
                 </Navbar.Collapse>
+                
             </Container>
         </Navbar>
     );
