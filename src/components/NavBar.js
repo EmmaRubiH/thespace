@@ -10,6 +10,7 @@ import Avatar from "./Avatar";
 import axios from "axios";
 import useClickOutsideToggle from "../hooks/useClickOutsideToggle";
 import { removeTokenTimestamp } from "../utils/utils";
+import { Row, Col } from "react-bootstrap";
 
 
 const NavBar = () => {
@@ -89,25 +90,27 @@ const NavBar = () => {
     );
 
     return (
-        <Navbar expanded={expanded} className={styles.NavBar} expand="md" fixed="top">
-            <Container>
+        <Navbar expanded={expanded} className={styles.NavBar} expand="md" variant="dark">
+            <Container className="d-flex flex-column">
                 
-                    
+            <Row>
+                <Col>
                 <NavLink to="/">
-                    <Navbar.Brand>
-                        <img src={logoems} alt="logo" height="45" />
-                        
+                    <Navbar.Brand className={styles.Brand}>
+                        The Space
                     </Navbar.Brand>
                     </NavLink>
+                    </Col>
+            </Row>
                    
                 
-                
+            <Row>
                 {currentUser && addPostIcon}
                 <Navbar.Toggle 
                     ref={ref}
                     onClick={() => setExpanded(!expanded)} 
                     aria-controls="basic-navbar-nav" />
-                <Navbar.Collapse id="basic-navbar-nav">
+                <Navbar.Collapse id="basic-navbar-nav" >
                     <Nav className="ml-auto text-left">
                         <NavLink
                             exact
@@ -121,6 +124,8 @@ const NavBar = () => {
 
                     </Nav>
                 </Navbar.Collapse>
+               
+                </Row>
                 
             </Container>
         </Navbar>

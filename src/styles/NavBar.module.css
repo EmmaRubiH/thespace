@@ -1,6 +1,7 @@
 .NavBar {
     background-color: #323232;
     border: 1px solid #323232;
+    padding-top: 50px;
     
     
 }
@@ -12,5 +13,13 @@
 
 .Active i {
     color: #a16a37;
+}
+
+.Brand {
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    color: whitesmoke;
+    font-family: Montserrat;
 }
 
