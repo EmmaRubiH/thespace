@@ -34,15 +34,15 @@
     width: 100%;
   }
   
-  .Blue,
-  .BlueOutline:hover,
+  .White,
+  .WhiteOutline:hover,
   .Bright:hover {
     background-color: #88250a;
     color: #ffffff;
   }
   
-  .BlueOutline,
-  .Blue:hover {
+  .WhiteOutline,
+  .White:hover {
     
     background-color: #ffffff;
     color: #ab641c;
@@ -53,7 +53,7 @@
     /* background-color: #242a3d;
     color: white; */
     background-color: #ab641c;
-    color: whitesmoke;
+    color: white;
   }
   
   .Black:hover,
@@ -62,10 +62,10 @@
     color: #242a3d;
     border-color: #242a3d; */
     background-color: #88250a;
-    color: whitesmoke;
+    color: white;
   }
   
   .Bright {
     background-color: #ab641c;
-    color: #ab641c;
+    color: white;
   }
