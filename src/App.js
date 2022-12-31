@@ -52,6 +52,16 @@ function App() {
               />
             )}
           />
+          <Route
+            exact
+            path="/populared"
+            render={() => (
+              <PostsPage
+                message="No results found. Adjust the search keyword or like a post."
+                filter={`popular__owner__profile=${profile_id}&ordering=-popular__created_at&`}
+              />
+            )}
+          />
           <Route exact path="/signin" render={() => <SignInForm />} />
           <Route exact path="/signup" render={() => <SignUpForm />} />
           <Route exact path="/posts/create" render={() => <PostCreateForm />} />

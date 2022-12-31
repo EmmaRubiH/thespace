@@ -20,6 +20,8 @@ const Post = (props) => {
     content,
     image,
     updated_at,
+    populars_count,
+    popular_id,
     postPage,
     setPosts,
   } = props;
@@ -73,6 +75,38 @@ const Post = (props) => {
     }
   };
 
+  const handlePopular = async () => {
+    try {
+        const { data } = await axiosRes.post("/populars/", { post: id });
+        setPosts((prevPosts) => ({
+            ...prevPosts,
+            results: prevPosts.results.map((post) => {
+            return post.id === id
+                ? { ...post, populars_count: post.populars_count + 1, popular_id: data.id }
+                : post;
+            }),
+        }));
+        } catch (err) {
+        // console.log(err);
+        }
+    };
+
+const handleUnpopular = async () => {
+    try {
+        await axiosRes.delete(`/populars/${popular_id}/`);
+        setPosts((prevPosts) => ({
+            ...prevPosts,
+            results: prevPosts.results.map((post) => {
+            return post.id === id
+                ? { ...post, populars_count: post.populars_count - 1, popular_id: null }
+                : post;
+            }),
+        }));
+        } catch (err) {
+        // console.log(err);
+        }
+    };
+
   return (
     <Card className={styles.Post} >
       <Card.Body>
@@ -122,7 +156,36 @@ const Post = (props) => {
               <i className="fa-solid fa-thumbs-up" />
             </OverlayTrigger>
           )}
-          {likes_count}
+            <span className={styles.Icon}>
+                    {likes_count}
+                    </span>
+                    {is_owner ? (
+                        <OverlayTrigger
+                        placement="top"
+                        overlay={<Tooltip>You can't bookmark your own post!</Tooltip>}
+                        >
+                        <i className="far fa-bookmark" />
+                        </OverlayTrigger>
+                        
+                    ) : popular_id ? (
+                        <span onClick={handleUnpopular}>
+                        <i className={`fas fa-bookmark ${styles.Red}`} />
+                        </span>
+                    ) : currentUser ? (
+                        <span onClick={handlePopular}>
+                        <i className={`far fa-bookmark ${styles.IconOutline}`} />
+                        </span>
+                    ) : (
+                        <OverlayTrigger
+                        placement="top"
+                        overlay={<Tooltip>Log in to bookmark posts!</Tooltip>}
+                        >
+                        <i className="far fa-bookmark" />
+                        </OverlayTrigger>
+                    )}
+                    <span className={styles.Icon}>
+                    {populars_count}
+                    </span>
           <Link to={`/posts/${id}`}>
             <i className="far fa-comments" />
           </Link>

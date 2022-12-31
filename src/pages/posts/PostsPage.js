@@ -17,6 +17,7 @@ import InfiniteScroll from "react-infinite-scroll-component";
 import { fetchMoreData } from "../../utils/utils";
 import PopularProfiles from "../profiles/PopularProfiles";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
+import PopularPosts from "./PopularPosts";
 
 function PostsPage({ message, filter = ""}) {
     const [posts, setPosts] = useState({ results: []});
@@ -52,6 +53,7 @@ function PostsPage({ message, filter = ""}) {
     <Row className="h-100">
       <Col className="py-2 p-0 p-lg-2" lg={8}>
         <PopularProfiles mobile />
+        <PopularPosts mobile />
         <Form
           className={styles.SearchBar}
           onSubmit={(event) => event.preventDefault()}
@@ -93,6 +95,7 @@ function PostsPage({ message, filter = ""}) {
       </Col>
       <Col md={4} className="d-none d-lg-block p-0 p-lg-2">
         <PopularProfiles />
+        <PopularPosts />
       </Col>
     </Row>
   );
