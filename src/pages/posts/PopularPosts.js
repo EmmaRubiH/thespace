@@ -34,16 +34,16 @@ const PopularPosts = (props) => {
     }, [currentUser]);
 
     return (
-        <Container className={`${appStyles.Content} ${
-            mobile && "d-lg-none text-center mb-3"
+        <Container className={`${appStyles.Contentmini} ${
+            mobile && "d-lg-none text-center mt-3"
             }`}
         >
             {popularPosts.results.length ? (
                 <>
-                    <p className={appStyles.SubTitle}>Most liked posts</p>
+                    <p className={appStyles.Liked}>Most liked posts</p>
                         {mobile ? (
                             <div className="d-flex justify-content-around">
-                            {popularPosts.results.slice(0,1).map((post) => (
+                            {popularPosts.results.slice(0,2).map((post) => (
                                 <PostSmall key={post.id} post={post} mobile />
                         ))}
                         </div>

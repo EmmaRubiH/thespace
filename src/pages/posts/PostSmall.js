@@ -57,8 +57,7 @@ const PostSmall = (props) => {
             </Link>
             </div>
             <div className={`mx-2 ${styles.WordBreak} ${styles.Condense}`}>
-                {/* <p><em>{title}</em></p> */}
-                <p><em>Created by: </em><span><strong>{owner}</strong></span></p> 
+                <p><em>Profile: </em><span><strong>{owner}</strong></span></p> 
             </div>
             <div className={`text-right ${!mobile && "ml-auto"}`}>
                 {!mobile &&
@@ -67,7 +66,7 @@ const PostSmall = (props) => {
                 (like_id ? (
                     <>
                     <span onClick={handleUnlike}>
-                        <i className={`fas fa-heart ${postStyles.Red}`} />
+                        <i className={`fa-solid fa-thumbs-up ${postStyles.Thumbs}`} />
                     </span>
                     <span className={styles.Icon}>
                             {likes_count}
@@ -76,7 +75,7 @@ const PostSmall = (props) => {
                 ) : (
                     <>
                     <span onClick={handleLike}>
-                        <i className={`far fa-heart ${postStyles.IconOutline}`} />
+                        <i className={`fa-solid fa-thumbs-up ${postStyles.ThumbsIconOutline}`} />
                     </span>
                     <span className={styles.Icon}>
                         {likes_count}

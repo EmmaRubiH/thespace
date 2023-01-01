@@ -143,11 +143,11 @@ const handleUnpopular = async () => {
             </OverlayTrigger>
           ) : like_id ? (
             <span onClick={handleUnlike}>
-              <i className={`fa-solid fa-thumbs-up ${styles.Heart}`} />
+              <i className={`fa-solid fa-thumbs-up ${styles.Thumbs}`} />
             </span>
           ) : currentUser ? (
             <span onClick={handleLike}>
-              <i className={`fa-solid fa-thumbs-up ${styles.HeartOutline}`} />
+              <i className={`fa-solid fa-thumbs-up ${styles.ThumbsOutline}`} />
             </span>
           ) : (
             <OverlayTrigger
@@ -163,25 +163,25 @@ const handleUnpopular = async () => {
                     {is_owner ? (
                         <OverlayTrigger
                         placement="top"
-                        overlay={<Tooltip>You can't bookmark your own post!</Tooltip>}
+                        overlay={<Tooltip>You can't save your own post!</Tooltip>}
                         >
-                        <i className="far fa-bookmark" />
+                        <i className="fa-regular fa-star" />
                         </OverlayTrigger>
                         
                     ) : popular_id ? (
                         <span onClick={handleUnpopular}>
-                        <i className={`fas fa-bookmark ${styles.Red}`} />
+                        <i className={`fa-regular fa-star ${styles.Blue}`} />
                         </span>
                     ) : currentUser ? (
                         <span onClick={handlePopular}>
-                        <i className={`far fa-bookmark ${styles.IconOutline}`} />
+                        <i className={`fa-regular fa-star ${styles.IconOutline}`} />
                         </span>
                     ) : (
                         <OverlayTrigger
                         placement="top"
-                        overlay={<Tooltip>Log in to bookmark posts!</Tooltip>}
+                        overlay={<Tooltip>Log in to save posts!</Tooltip>}
                         >
-                        <i className="far fa-bookmark" />
+                        <i className="fa-regular fa-star" />
                         </OverlayTrigger>
                     )}
                     <span className={styles.Icon}>

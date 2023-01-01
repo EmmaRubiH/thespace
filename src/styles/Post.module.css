@@ -1,7 +1,7 @@
 .Post {
     background-color: #323232;
-    border: 1px solid #dadadf;
-    border-radius: 10px;
+    border: 6px solid #dadadf;
+    border-radius: 20px;
     margin-bottom: 16px;
     text-align: center;
     color: whitesmoke;
@@ -15,26 +15,26 @@
     margin-right: 30px!important;
   }
 
-  .Red {
-    color: #f85032;
+  .Blue {
+    color: #2080c5;
   }
 
-  .Red:hover {
-    color: #b43a24;
+  .Blue:hover {
+    color: #1d528a;
   }
 
   .IconOutline:hover {
-    color: #f85032;
+    color: #2080c5;
   }
   
-  .Heart {
+  .Thumbs {
     color: rgb(198, 87, 13);
   }
   
-  .Heart:hover {
+  .Thumbs:hover {
     color: #88250a;
   }
   
-  .HeartOutline:hover {
+  .ThumbsOutline:hover {
     color: #f3eeed;
   }

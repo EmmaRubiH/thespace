@@ -18,7 +18,7 @@ const Profile = (props) => {
 
   return (
     <div
-      className={`my-3 d-flex align-items-center ${mobile && "flex-column"}`}
+      className={`my-3 d-flex align-items-center ${mobile && "flex-column"} ${styles.Box}`}
     >
       <div>
         <Link className="align-self-center" to={`/profiles/${id}`}>
@@ -37,14 +37,14 @@ const Profile = (props) => {
               className={`${btnStyles.Button} ${btnStyles.BlackOutline}`}
               onClick={() => handleUnfollow(profile)}
             >
-              unfollow
+              Unfollow
             </Button>
           ) : (
             <Button
               className={`${btnStyles.Button} ${btnStyles.Black}`}
               onClick={() => handleFollow(profile)}
             >
-              follow
+              Follow
             </Button>
           ))}
       </div>
