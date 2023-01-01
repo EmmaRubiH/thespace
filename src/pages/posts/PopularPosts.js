@@ -4,13 +4,13 @@ import { axiosReq } from '../../api/axiosDefaults';
 import appStyles from "../../App.module.css";
 import { useCurrentUser } from '../../contexts/CurrentUserContext';
 import Asset from '../../components/Asset';
-import MostLiked from '../../components/MostLiked';
+import PostSmall from './PostSmall';
 
 const PopularPosts = (props) => {
     const {mobile, setPosts} = props;
     console.log(props)
     const[postData, setPostData] = useState({
-        pagePost: {results:[] },
+        pagePost: { results: [] },
         popularPosts: { results: [] },
     });
     const { popularPosts } = postData;
@@ -44,12 +44,12 @@ const PopularPosts = (props) => {
                         {mobile ? (
                             <div className="d-flex justify-content-around">
                             {popularPosts.results.slice(0,1).map((post) => (
-                                <MostLiked key={post.id} post={post} mobile />
+                                <PostSmall key={post.id} post={post} mobile />
                         ))}
                         </div>
                         ):(
                             popularPosts.results.slice(0,3).map((post) => (
-                                <MostLiked key={post.id} post={post} setPosts={setPosts}/>
+                                <PostSmall key={post.id} post={post} setPosts={setPosts}/>
                         ))
                     )}
                 </>

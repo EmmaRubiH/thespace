@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "../../styles/Post.module.css";
+import appStyles from "../../App.module.css";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { Card, Media, OverlayTrigger, Tooltip } from "react-bootstrap";
 import { Link, useHistory } from "react-router-dom";
@@ -22,7 +23,7 @@ const Post = (props) => {
     updated_at,
     populars_count,
     popular_id,
-    postPage,
+  
     setPosts,
   } = props;
 
@@ -108,7 +109,7 @@ const handleUnpopular = async () => {
     };
 
   return (
-    <Card className={styles.Post} >
+    <Card className={`${styles.Post} ${appStyles.Content}`}>
       <Card.Body>
         <Media className="align-items-center justify-content-between">
           <Link to={`/profiles/${profile_id}`}>
@@ -117,7 +118,7 @@ const handleUnpopular = async () => {
           </Link>
           <div className="d-flex align-items-center">
             <span>{updated_at}</span>
-            {is_owner && postPage && (
+            {is_owner && setPosts && (
               <MoreDropdown
                 handleEdit={handleEdit}
                 handleDelete={handleDelete}
@@ -130,7 +131,7 @@ const handleUnpopular = async () => {
         <Card.Img src={image} alt={title} />
       </Link>
       <Card.Body>
-        {title && <Card.Title className="text-center">{title}</Card.Title>}
+      {title && <Card.Title className={`text-center`} >{title}</Card.Title>}
         {content && <Card.Text>{content}</Card.Text>}
         <div className={styles.PostBar}>
           {is_owner ? (

@@ -10,6 +10,22 @@
   h5 {
     margin: 0 0;
   }
+
+  .Icon {
+    margin-right: 30px!important;
+  }
+
+  .Red {
+    color: #f85032;
+  }
+
+  .Red:hover {
+    color: #b43a24;
+  }
+
+  .IconOutline:hover {
+    color: #f85032;
+  }
   
   .Heart {
     color: rgb(198, 87, 13);

@@ -1,5 +1,5 @@
 import React from 'react'
-import { useCurrentUser } from "../../context/CurrentUserContext";
+import { useCurrentUser } from '../../contexts/CurrentUserContext';
 import styles from "../../styles/ProfilePost.module.css";
 import MostLiked from '../../components/MostLiked';
 import { Link } from 'react-router-dom';

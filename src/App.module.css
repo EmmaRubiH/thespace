@@ -44,6 +44,15 @@
   
 }
 
+.Header {
+  letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.7rem;
+}
+
+
+
 
 
 * {

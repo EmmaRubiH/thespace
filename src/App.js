@@ -58,7 +58,7 @@ function App() {
             render={() => (
               <PostsPage
                 message="No results found. Adjust the search keyword or like a post."
-                filter={`popular__owner__profile=${profile_id}&ordering=-popular__created_at&`}
+                filter={`popular__owner__profile=${profile_id}&ordering=-populars__created_at&`}
               />
             )}
           />
