@@ -1,4 +1,7 @@
 .MostLiked {
     margin: 0px 8px 0px 8px;
     object-fit: cover;
+    border-radius: 50% 20% / 10% 40%;
+    background-color: #ffffff;
+    padding: 3px;
 }
