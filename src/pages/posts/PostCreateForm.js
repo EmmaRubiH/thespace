@@ -6,7 +6,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 
-import Upload from "../../assets/upload.png";
+import Upload from "../../assets/uploaded.png";
 
 import styles from "../../styles/PostCreateEditForm.module.css";
 import appStyles from "../../App.module.css";
@@ -21,6 +21,7 @@ function PostCreateForm() {
     useRedirect("loggedOut");
 
     const [errors, setErrors] = useState({});
+
 
     const [postData, setPostData] = useState({
         title: "",
@@ -59,14 +60,14 @@ function PostCreateForm() {
 
         try {
             const { data } = await axiosReq.post('/posts/', formData);
-            history.push(`/posts/${data.id}`)
+            history.push(`/posts/${data.id}`);
         } catch (err) {
-            // console.log(err)
-            if (err.respone?.status !== 401) {
-                setErrors(err.respone?.data)
+            console.log(err);
+            if (err.response?.status !== 401) {
+                setErrors(err.response?.data);
             }
         }
-    }
+    };
 
     const textFields = (
         <div className="text-center">
@@ -79,19 +80,24 @@ function PostCreateForm() {
                     onChange={handleChange}
                 />
             </Form.Group>
+            {errors.title?.map((message, idx) => (
+                <Alert key={idx} variant="warning">
+                    {message}
+                </Alert>
+            ))}
             <Form.Group>
                 <Form.Label>Content</Form.Label>
                 <Form.Control
-                    as="textarea"
-                    rows={6}
-                    name="content"
-                    value={content}
-                    onChange={handleChange}
+                as="textarea"
+                rows={6}
+                name="content"
+                value={content}
+                onChange={handleChange}
                 />
             </Form.Group>
             {errors?.content?.map((message, idx) => (
-                <Alert variant="Warning" key={idx}>
-                    {message}
+                <Alert variant="warning" key={idx}>
+                {message}
                 </Alert>
             ))}
 
@@ -104,6 +110,11 @@ function PostCreateForm() {
             <Button className={`${btnStyles.Button} ${btnStyles.White}`} type="submit">
                 create
             </Button>
+            {errors.non_field_errors?.map((message, idx) => (
+              <Alert key={idx} variant="warning" className="mt-3">
+                {message}
+              </Alert>
+            ))}
         </div>
     );
 
@@ -112,7 +123,7 @@ function PostCreateForm() {
             <Row>
                 <Col className="py-2 p-0 p-md-2" md={7} lg={8}>
                     <Container
-                        className={`${appStyles.Content} ${styles.Container} d-flex flex-column justify-content-center`}
+                        className={`${styles.Contentadd} ${styles.Container} d-flex flex-column justify-content-center`}
                     >
                         <Form.Group className="text-center">
                             {image ? (
@@ -135,6 +146,7 @@ function PostCreateForm() {
                                     htmlFor="image-upload"
                                 >
                                     <Asset
+                                        className="d-flex"
                                         src={Upload}
                                         message="Click or tap to upload an image"
                                     />
@@ -157,7 +169,7 @@ function PostCreateForm() {
                     </Container>
                 </Col>
                 <Col md={5} lg={4} className="d-none d-md-block p-0 p-md-2">
-                    <Container className={appStyles.Content}>{textFields}</Container>
+                    <Container className={styles.Contentadd}>{textFields}</Container>
                 </Col>
             </Row>
         </Form>
