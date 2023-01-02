@@ -23,7 +23,7 @@ const Post = (props) => {
     updated_at,
     populars_count,
     popular_id,
-  
+
     setPosts,
   } = props;
 
@@ -46,67 +46,67 @@ const Post = (props) => {
 
   const handleLike = async () => {
     try {
-        const { data } = await axiosRes.post("/likes/", { post: id });
-        setPosts((prevPosts) => ({
-            ...prevPosts,
-            results: prevPosts.results.map((post) => {
-                return post.id === id
-                ? { ...post, likes_count: post.likes_count + 1, like_id: data.id }
-                : post;
-            }),
-        }));
+      const { data } = await axiosRes.post("/likes/", { post: id });
+      setPosts((prevPosts) => ({
+        ...prevPosts,
+        results: prevPosts.results.map((post) => {
+          return post.id === id
+            ? { ...post, likes_count: post.likes_count + 1, like_id: data.id }
+            : post;
+        }),
+      }));
     } catch (err) {
-        // console.log(err);
+      // console.log(err);
     }
   };
 
   const handleUnlike = async () => {
     try {
-        await axiosRes.delete(`/likes/${like_id}/`);
-        setPosts((prevPosts) => ({
-            ...prevPosts,
-            results: prevPosts.results.map((post) => {
-                return post.id === id
-                ? { ...post, likes_count: post.likes_count -1, like_id: null }
-                : post;
-            }),
-        }));
+      await axiosRes.delete(`/likes/${like_id}/`);
+      setPosts((prevPosts) => ({
+        ...prevPosts,
+        results: prevPosts.results.map((post) => {
+          return post.id === id
+            ? { ...post, likes_count: post.likes_count - 1, like_id: null }
+            : post;
+        }),
+      }));
     } catch (err) {
-        // console.log(err);
+      // console.log(err);
     }
   };
 
   const handlePopular = async () => {
     try {
-        const { data } = await axiosRes.post("/populars/", { post: id });
-        setPosts((prevPosts) => ({
-            ...prevPosts,
-            results: prevPosts.results.map((post) => {
-            return post.id === id
-                ? { ...post, populars_count: post.populars_count + 1, popular_id: data.id }
-                : post;
-            }),
-        }));
-        } catch (err) {
-        // console.log(err);
-        }
-    };
+      const { data } = await axiosRes.post("/populars/", { post: id });
+      setPosts((prevPosts) => ({
+        ...prevPosts,
+        results: prevPosts.results.map((post) => {
+          return post.id === id
+            ? { ...post, populars_count: post.populars_count + 1, popular_id: data.id }
+            : post;
+        }),
+      }));
+    } catch (err) {
+      // console.log(err);
+    }
+  };
 
-const handleUnpopular = async () => {
+  const handleUnpopular = async () => {
     try {
-        await axiosRes.delete(`/populars/${popular_id}/`);
-        setPosts((prevPosts) => ({
-            ...prevPosts,
-            results: prevPosts.results.map((post) => {
-            return post.id === id
-                ? { ...post, populars_count: post.populars_count - 1, popular_id: null }
-                : post;
-            }),
-        }));
-        } catch (err) {
-        // console.log(err);
-        }
-    };
+      await axiosRes.delete(`/populars/${popular_id}/`);
+      setPosts((prevPosts) => ({
+        ...prevPosts,
+        results: prevPosts.results.map((post) => {
+          return post.id === id
+            ? { ...post, populars_count: post.populars_count - 1, popular_id: null }
+            : post;
+        }),
+      }));
+    } catch (err) {
+      // console.log(err);
+    }
+  };
 
   return (
     <Card className={`${styles.Post} ${appStyles.Content}`}>
@@ -131,7 +131,7 @@ const handleUnpopular = async () => {
         <Card.Img src={image} alt={title} />
       </Link>
       <Card.Body>
-      {title && <Card.Title className={`text-center`} >{title}</Card.Title>}
+        {title && <Card.Title className={`text-center`} >{title}</Card.Title>}
         {content && <Card.Text>{content}</Card.Text>}
         <div className={styles.PostBar}>
           {is_owner ? (

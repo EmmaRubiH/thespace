@@ -56,7 +56,7 @@ function PostCreateForm() {
 
         formData.append('title', title)
         formData.append('content', content)
-        formData.append('image', imageInput.current.files[0])
+        formData.append('image', imageInput.current.files[0]);
 
         try {
             const { data } = await axiosReq.post('/posts/', formData);
@@ -95,9 +95,9 @@ function PostCreateForm() {
                 onChange={handleChange}
                 />
             </Form.Group>
-            {errors?.content?.map((message, idx) => (
-                <Alert variant="warning" key={idx}>
-                {message}
+            {errors.content?.map((message, idx) => (
+                <Alert key={idx} variant="warning">
+                    {message}
                 </Alert>
             ))}
 

@@ -27,7 +27,7 @@
   }
   
   .Button:focus {
-    background-color: #88250a;
+    background-color: #323232;
   }
   
   .Wide {
@@ -38,7 +38,7 @@
   .White,
   .WhiteOutline:hover,
   .Bright:hover {
-    background-color: #88250a;
+    background-color: #323232;
     color: #ffffff;
   }
   
