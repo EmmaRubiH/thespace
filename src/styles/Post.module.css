@@ -1,10 +1,10 @@
 .Post {
-    background-color: #323232;
-    border: 6px solid #dadadf;
+    background-color: whitesmoke;
+    border: 6px solid #323232;
     border-radius: 20px;
     margin-bottom: 16px;
     text-align: center;
-    color: whitesmoke;
+    color: black;
   }
   .Post figure,
   h5 {
@@ -36,5 +36,5 @@
   }
   
   .ThumbsOutline:hover {
-    color: #f3eeed;
+    color: black;
   }

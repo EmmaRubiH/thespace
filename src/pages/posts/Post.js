@@ -157,38 +157,38 @@ const handleUnpopular = async () => {
               <i className="fa-solid fa-thumbs-up" />
             </OverlayTrigger>
           )}
-            <span className={styles.Icon}>
-                    {likes_count}
-                    </span>
-                    {is_owner ? (
-                        <OverlayTrigger
-                        placement="top"
-                        overlay={<Tooltip>You can't save your own post!</Tooltip>}
-                        >
-                        <i className="fa-regular fa-star" />
-                        </OverlayTrigger>
-                        
-                    ) : popular_id ? (
-                        <span onClick={handleUnpopular}>
-                        <i className={`fa-regular fa-star ${styles.Blue}`} />
-                        </span>
-                    ) : currentUser ? (
-                        <span onClick={handlePopular}>
-                        <i className={`fa-regular fa-star ${styles.IconOutline}`} />
-                        </span>
-                    ) : (
-                        <OverlayTrigger
-                        placement="top"
-                        overlay={<Tooltip>Log in to save posts!</Tooltip>}
-                        >
-                        <i className="fa-regular fa-star" />
-                        </OverlayTrigger>
-                    )}
-                    <span className={styles.Icon}>
-                    {populars_count}
-                    </span>
+          <span className={styles.Icon}>
+            {likes_count}
+          </span>
+          {is_owner ? (
+            <OverlayTrigger
+              placement="top"
+              overlay={<Tooltip>You can't save your own post!</Tooltip>}
+            >
+              <i className="fa-regular fa-star" />
+            </OverlayTrigger>
+
+          ) : popular_id ? (
+            <span onClick={handleUnpopular}>
+              <i className={`fa-regular fa-star ${styles.Blue}`} />
+            </span>
+          ) : currentUser ? (
+            <span onClick={handlePopular}>
+              <i className={`fa-regular fa-star ${styles.IconOutline}`} />
+            </span>
+          ) : (
+            <OverlayTrigger
+              placement="top"
+              overlay={<Tooltip>Log in to save posts!</Tooltip>}
+            >
+              <i className="fa-regular fa-star" />
+            </OverlayTrigger>
+          )}
+          <span className={styles.Icon}>
+            {populars_count}
+          </span>
           <Link to={`/posts/${id}`}>
-            <i className="far fa-comments" />
+            <i className={`far fa-comments ${styles.Comments}`} />
           </Link>
           {comments_count}
         </div>

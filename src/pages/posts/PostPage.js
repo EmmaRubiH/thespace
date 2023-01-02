@@ -26,19 +26,20 @@ function PostPage() {
     const [comments, setComments] = useState({ results: [] });
 
     useEffect(() => {
-        const handleMount = async () => {
-            try {
-                const [{data: post}, {data: comments}] = await Promise.all([
-                    axiosReq.get(`/posts/${id}`),
-                    axiosReq.get(`/comments/?post=${id}`)
-                ]);
-                setPost({results: [post] });
-                setComments(comments);
-            } catch (err) {
-                // console.log(err);
-            }
+      const handleMount = async () => {
+        try {
+          const [{ data: post }, { data: comments }] = await Promise.all([
+            axiosReq.get(`/posts/${id}`),
+            axiosReq.get(`/comments/?post=${id}`),
+          ]);
+          setPost({ results: [post] });
+          setComments(comments);
+        } catch (err) {
+          // console.log(err);
         }
-        handleMount();
+      };
+  
+      handleMount();
     }, [id]);
 
 
@@ -48,7 +49,7 @@ function PostPage() {
         <PopularProfiles mobile />
         <PopularPosts mobile />
         <Post {...post.results[0]} setPosts={setPost} postPage />
-        <Container className={appStyles.Content}>
+        <Container className={appStyles.Contentfix}>
         {currentUser ? (
           <CommentCreateForm
           profile_id={currentUser.profile_id}
@@ -62,7 +63,7 @@ function PostPage() {
         ) : null}
         {comments.results.length ? (
           <InfiniteScroll
-            childrem={comments.results.map((comment) => (
+            children={comments.results.map((comment) => (
               <Comment 
                 key={comment.id} 
                 {...comment}
