@@ -1,70 +1,85 @@
-# Getting Started with Create React App
+# THE SPACE 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The space is a online blog, styled media platform. Where the users can create a profile and post their images along with a title and content. 
+Users on this site can also view other users profiles. A user can comment, like and favorite (star) them.
+This platform is designed to provide a  online community as users interact with each others post.
 
-## Available Scripts
+## User Stories:
 
-In the project directory, you can run:
+### User Goals:
 
-### `npm start`
+<details><summary>CLICK ME</summary>
+<p>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+* As a site user I can register an account
+* As a site user I can delete my account
+* As a site user I can create posts
+* As a Site User I can Edit and Delete that Post at want
+* As a Site User I can Follow and Unfollow other Users
+* As a Site User I can Comment on other Users Posts
+* As a Site User I can Edit and Delete the Comment I own
+* As a Site User I can Like and Unlike Posts from other Users Posts
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+</p>
+</details>
 
-### `npm test`
+### Navigation & Authentication:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<details><summary>CLICK ME</summary>
+<p>
 
-### `npm run build`
+* As a user I can view a navbar from every page so that I can navigate easily between pages
+* As a user I can navigate through pages quickly so that I can view content seamlessly without page refresh
+* As a user I can create a new account so that I can access all the features for signed up users
+* As a user I can sign in to the app so that I can access functionality for logged in users
+* As a user I can tell if I am logged in or not so that I can log in if I need to
+* As a user I can maintain my logged-in status until I choose to log out so that my user experience is not compromised
+* As a logged out user I can see sign in and sign up options so that I can sign in/sign up
+* As a user I can view user's avatars so that I can easily identify users of the application
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+</P>
+</details>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Adding & Liking posts:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<details><summary>CLICK ME</summary>
+<p>
 
-### `npm run eject`
+* As a logged in user I can create posts so that I can share my images with the world!
+* As a user I can view the details of a single post so that I can learn more about it
+* As a logged in user I can like a post so that I can show my support for the posts that interest me
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+</p>
+</details>
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### The Posts Page
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+<details><summary>CLICK ME</summary>
+<p>
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+* As a user I can view all the most recent posts, ordered by most recently created first so that I am up to date with the newest content
+* As a user, I can search for posts with keywords, so that I can find the posts and user profiles I am most interested in
+* As a logged in user I can view the posts I liked so that I can find the posts I enjoy the most
+* As a logged in user I can view content filtered by users I follow so that I can keep up to date with what they are posting about
+* As a user I can keep scrolling through the images on the site, that are loaded for me automatically so that I don't have to click on "next page" etc
 
-## Learn More
+</p>
+</details>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### The Post page: 
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<details><summary>CLICK ME</summary>
+<p>
 
-### Code Splitting
+* As a user I can view the posts page so that I can read the comments about the post
+* As a post owner I can edit my post title and description so that I can make corrections or update my post after it was created
+* As a logged in user I can add comments to a post so that I can share my thoughts about the post
+* As a user I can see how long ago a comment was made so that I know how old a comment is
+* As a user I can read comments on posts so that I can read what other users think about the posts
+* As an owner of a comment I can delete my comment so that I can control removal of my comment from the application
+* As an owner of a comment I can edit my comment so that I can fix or update my existing comment 
+* As a user I can see a list of the most liked posts so that I can see which ones are the most popular ones
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+</p>
+</details>
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
