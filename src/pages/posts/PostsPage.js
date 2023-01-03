@@ -20,7 +20,7 @@ import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import PopularPosts from "./PopularPosts";
 
 function PostsPage({ message, filter = ""}) {
-    const [posts, setPosts] = useState({ results: []});
+    const [posts, setPosts] = useState({ results: [] });
     const [hasLoaded, setHasLoaded] = useState(false);
     const { pathname } = useLocation();
 
@@ -96,7 +96,7 @@ function PostsPage({ message, filter = ""}) {
       </Col>
       <Col md={4} className="d-none d-lg-block p-0 p-lg-2">
         <PopularProfiles />
-        <PopularPosts />
+        <PopularPosts setPosts={setPosts} />
       </Col>
     </Row>
   );

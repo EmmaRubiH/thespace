@@ -165,23 +165,23 @@ const Post = (props) => {
               placement="top"
               overlay={<Tooltip>You can't save your own post!</Tooltip>}
             >
-              <i className="fa-regular fa-star" />
+              <i className="fa-solid fa-thumbtack" />
             </OverlayTrigger>
 
           ) : popular_id ? (
             <span onClick={handleUnpopular}>
-              <i className={`fa-regular fa-star ${styles.Blue}`} />
+              <i className={`fa-solid fa-thumbtack ${styles.Blue}`} />
             </span>
           ) : currentUser ? (
             <span onClick={handlePopular}>
-              <i className={`fa-regular fa-star ${styles.IconOutline}`} />
+              <i className={`fa-solid fa-thumbtack ${styles.IconOutline}`} />
             </span>
           ) : (
             <OverlayTrigger
               placement="top"
               overlay={<Tooltip>Log in to save posts!</Tooltip>}
             >
-              <i className="fa-regular fa-star" />
+              <i className="fa-solid fa-thumbtack" />
             </OverlayTrigger>
           )}
           <span className={styles.Icon}>

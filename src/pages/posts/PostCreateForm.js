@@ -12,7 +12,8 @@ import styles from "../../styles/PostCreateEditForm.module.css";
 import appStyles from "../../App.module.css";
 import btnStyles from "../../styles/Button.module.css";
 import Asset from "../../components/Asset";
-import { Alert, Image } from "react-bootstrap";
+import Alert from "react-bootstrap/Alert";
+import Image from "react-bootstrap/Image";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { axiosReq } from "../../api/axiosDefaults";
 import { useRedirect } from "../../hooks/useRedirect";
@@ -51,23 +52,24 @@ function PostCreateForm() {
     };
 
     const handleSubmit = async (event) => {
-        event.preventDefault()
+        event.preventDefault();
         const formData = new FormData();
-
-        formData.append('title', title)
-        formData.append('content', content)
-        formData.append('image', imageInput.current.files[0]);
-
+    
+        formData.append("title", title);
+        formData.append("content", content);
+        formData.append("image", imageInput.current.files[0]);
+    
         try {
-            const { data } = await axiosReq.post('/posts/', formData);
+            const { data } = await axiosReq.post("/posts/", formData);
             history.push(`/posts/${data.id}`);
-        } catch (err) {
-            console.log(err);
-            if (err.response?.status !== 401) {
-                setErrors(err.response?.data);
+            } catch (err) {
+            // console.log(err);
+                if (err.response?.status !== 401) {
+                    setErrors(err.response?.data);
+                }
             }
-        }
-    };
+        };
+      
 
     const textFields = (
         <div className="text-center">
@@ -75,20 +77,22 @@ function PostCreateForm() {
                 <Form.Label>Title</Form.Label>
                 <Form.Control
                     type="text"
+                    placeholder=""
                     name="title"
                     value={title}
                     onChange={handleChange}
                 />
             </Form.Group>
             {errors.title?.map((message, idx) => (
-                <Alert key={idx} variant="warning">
+                <Alert key={idx} variant="info" className="mt-3">
                     {message}
                 </Alert>
             ))}
             <Form.Group>
                 <Form.Label>Content</Form.Label>
                 <Form.Control
-                as="textarea"
+                type="textarea"
+                placeholder=""
                 rows={6}
                 name="content"
                 value={content}
@@ -96,9 +100,9 @@ function PostCreateForm() {
                 />
             </Form.Group>
             {errors.content?.map((message, idx) => (
-                <Alert key={idx} variant="warning">
-                    {message}
-                </Alert>
+                        <Alert key={idx} variant="dark" className="mt-3">
+                            {message}
+                        </Alert>
             ))}
 
             <Button
@@ -110,11 +114,7 @@ function PostCreateForm() {
             <Button className={`${btnStyles.Button} ${btnStyles.White}`} type="submit">
                 create
             </Button>
-            {errors.non_field_errors?.map((message, idx) => (
-              <Alert key={idx} variant="warning" className="mt-3">
-                {message}
-              </Alert>
-            ))}
+            
         </div>
     );
 
@@ -160,11 +160,11 @@ function PostCreateForm() {
                             />
 
                         </Form.Group>
-                        {errors?.image?.map((message, idx) => (
-                            <Alert variant="Warning" key={idx}>
-                                {message}
+                        {errors.image?.map((idx) => (
+                            <Alert variant="info" key={idx}>
+                                <p>Please upload an image to continue!</p>
                             </Alert>
-                        ))}
+                         ))}
                         <div className="d-md-none">{textFields}</div>
                     </Container>
                 </Col>

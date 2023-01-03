@@ -97,7 +97,7 @@ const ProfileEditForm = () => {
       </Form.Group>
 
       {errors?.content?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
+        <Alert variant="info" key={idx}>
           {message}
         </Alert>
       ))}
@@ -125,7 +125,7 @@ const ProfileEditForm = () => {
                 </figure>
               )}
               {errors?.image?.map((message, idx) => (
-                <Alert variant="warning" key={idx}>
+                <Alert variant="info" key={idx}>
                   {message}
                 </Alert>
               ))}

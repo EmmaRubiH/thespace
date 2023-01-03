@@ -83,3 +83,139 @@ This platform is designed to provide a  online community as users interact with 
 </p>
 </details>
 
+### The Profile page:
+
+<details><summary>CLICK ME</summary>
+<p>
+
+* As a user I can view other users profiles so that I can see their posts and learn more about them
+* As a user I can see a list of the most followed profiles so that I can see which profiles are popular
+* As a user I can view statistics about a specific user: bio, number of posts, follows and users followed so that I can learn more about them
+* As a logged in user I can follow and unfollow other users so that I can see and remove posts by specific users in my posts feed
+* As a user I can view all the posts by a specific user so that I can catch up on their latest posts, or decide I want to follow them
+* As a logged in user I can edit my profile so that I can change my profile picture and bio
+* As a logged in user I can update my username and password so that I can change my display name and keep my profile secure
+
+</p>
+</details>
+
+## Strategy:
+<hr>
+
+The site allows the users to create their profiles with avatar image, username and bio info.
+And the users can upload their own content with photos, titles and content. 
+Users can also interact with other users post. view, liking, commenting and saving others posts.
+
+The site will allow for users authentification and CRUD functionalaity. (create, read, update and delete.)
+
+## Structure:
+<hr>
+
+### Home page
+
+* Landing page:
+  * Navbar: Title for header "THE SPACE", Home, Sign In, SiggUp links.
+  * Posts by all users
+  * Searchbar where the user can search post with relevent keyword.
+  * List: Most followed profiles
+  * List: Most liked posts
+
+* When logged in:
+  * Navbar: Title "THE SPACE", Home, Feed, Liked, Saved, Signout, Profile (Avatar) and Add post links.
+
+<details><summary>Home page: screenshot</summary>
+<p>
+</p>
+</details>
+
+### Sign up page:
+
+* Sign Up form:
+  * Title: Sign Up
+  * Username
+  * Password
+  * Confirm password
+  * Sign Up button
+  * Bellow it's a link to Sign In if the user is already has an account.
+  * Image for lager screens will display, mobile the image disappers.
+
+<details><summary>Sign Up: screenshot</summary>
+<p>
+</p>
+</details>
+
+### Sign In page:
+
+* Sign In form:
+  * Title: Sign In
+  * Username
+  * Password
+  * Sign in button
+  * Bellow it's a link to sign up if the user has not create an account yet.
+  * Image for lager screens will display, mobile the image disappers.
+
+<details><summary>Sign Ip: screenshot</summary>
+<p>
+</p>
+</details>
+
+### Feed page:
+
+(for logged in users)
+
+* Feed page contains:
+  * Feed text and icon in navbar
+  * Search field
+  * Post by author, and avtar and Id.
+  * Date of post
+  * Image
+  * Title and Content for image
+  * Icons: Like button (thumbs up), Save button (thumbtack) and Comment button (comments). all of the icons have count beside.
+  * list: Most liked post
+  * List: Most followed profiles
+    * Buttons to Follow and Unfollow profiles
+
+<details><summary>Feed page: screenshot</summary>
+<p>
+</p>
+</details>
+
+### Liked Page:
+
+Here the user can view all their liked post.
+
+<details><summary>Liked page: screenshot</summary>
+<p>
+</p>
+</details>
+
+### Saved page:
+
+Here on the saved page, the user can view all their saved posts. 
+
+<details><summary>Saved page: screenshot</summary>
+<p>
+</p>
+</details>
+
+### Add Post page:
+
+* Add page contains:
+  * Add text and icon in navbar
+  * Image and text that user can click on to upload image.
+  * Title input field
+  * Content input field
+  * Delete button
+  * Create button
+
+<details><summary>Add post page: screenshot</summary>
+<p>
+</p>
+</details>
+
+### Edit Post page :
+
+
+
+
+

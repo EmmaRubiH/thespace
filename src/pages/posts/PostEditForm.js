@@ -95,7 +95,7 @@ function PostEditForm() {
         />
       </Form.Group>
       {errors?.title?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
+        <Alert variant="info" key={idx}>
           {message}
         </Alert>
       ))}
@@ -111,7 +111,7 @@ function PostEditForm() {
         />
       </Form.Group>
       {errors?.content?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
+        <Alert variant="info" key={idx}>
           {message}
         </Alert>
       ))}
@@ -156,7 +156,7 @@ function PostEditForm() {
               />
             </Form.Group>
             {errors?.image?.map((message, idx) => (
-              <Alert variant="warning" key={idx}>
+              <Alert variant="info" key={idx}>
                 {message}
               </Alert>
             ))}
