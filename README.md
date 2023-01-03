@@ -6,6 +6,12 @@ The space is a online blog, styled media platform. Where the users can create a 
 Users on this site can also view other users profiles. A user can comment, like and favorite (star) them.
 This platform is designed to provide a  online community as users interact with each others post.
 
+[Deployed API heroku link](https://drf-p5.herokuapp.com/)
+
+[Deployed FRONT-END heroku Link](https://thespace.herokuapp.com/) : LIVE SITE
+
+[DEPLOYED Back-end github repository](https://github.com/EmmaRubiH/Portfolio-5-DRF)
+
 ## User Stories:
 
 ### User Goals:
@@ -127,8 +133,12 @@ The site will allow for users authentification and CRUD functionalaity. (create,
 
 <details><summary>Home page: screenshot</summary>
 <p>
+
+![start](/src/assets/startpage.png)
+
 </p>
 </details>
+<br>
 
 ### Sign up page:
 
@@ -143,8 +153,12 @@ The site will allow for users authentification and CRUD functionalaity. (create,
 
 <details><summary>Sign Up: screenshot</summary>
 <p>
+
+![signup](/src/assets/signup.png)
+
 </p>
 </details>
+<br>
 
 ### Sign In page:
 
@@ -156,10 +170,14 @@ The site will allow for users authentification and CRUD functionalaity. (create,
   * Bellow it's a link to sign up if the user has not create an account yet.
   * Image for lager screens will display, mobile the image disappers.
 
-<details><summary>Sign Ip: screenshot</summary>
+<details><summary>Sign In: screenshot</summary>
 <p>
+
+![signin](/src/assets/signin.png)
+
 </p>
 </details>
+<br>
 
 ### Feed page:
 
@@ -179,8 +197,11 @@ The site will allow for users authentification and CRUD functionalaity. (create,
 
 <details><summary>Feed page: screenshot</summary>
 <p>
+
+![feed](/src/assets/feed.png)
 </p>
 </details>
+<br>
 
 ### Liked Page:
 
@@ -188,8 +209,12 @@ Here the user can view all their liked post.
 
 <details><summary>Liked page: screenshot</summary>
 <p>
+
+![liked](/src//assets/liked.png)
+
 </p>
 </details>
+<br>
 
 ### Saved page:
 
@@ -197,8 +222,11 @@ Here on the saved page, the user can view all their saved posts.
 
 <details><summary>Saved page: screenshot</summary>
 <p>
+
+![saved](/src//assets/saved.png)
 </p>
 </details>
+<br>
 
 ### Add Post page:
 
@@ -212,8 +240,12 @@ Here on the saved page, the user can view all their saved posts.
 
 <details><summary>Add post page: screenshot</summary>
 <p>
+
+![addpost](/src/assets/addpost.png)
+
 </p>
 </details>
+<br>
 
 ### Edit Post page :
 
@@ -229,8 +261,12 @@ The user can see three dots on their own post. The user can select beetwen two i
 
 <details><summary>Edit post page: screenshot</summary>
 <p>
+
+![editpost](/src/assets/editpost.png)
+
 </p>
 </details>
+<br>
 
 ### Profile page:
 
@@ -254,8 +290,12 @@ The user can see three dots on their own post. The user can select beetwen two i
 
 <details><summary>Profile page: screenshot</summary>
 <p>
+
+![profilepage](/src/assets/profilepage.png)
+
 </p>
 </details>
+<br>
 
 ### Edit Profile page:
 
@@ -282,27 +322,52 @@ Change password:
 
 <details><summary>Edit profile: screenshot</summary>
 <p>
+
+![editprofile](/src/assets/editprofile.png)
+
 </p>
 </details>
 
 <details><summary>Change username: screenshot</summary>
 <p>
+
+![username](/src/assets/username.png)
+
 </p>
 </details>
 
 <details><summary>Change password: screenshot</summary>
 <p>
+
+![password](/src/assets/password.png)
+
 </p>
 </details>
+<br>
+
+## Components:
+<hr>
+
+1. Assets.js
+2. Avatar.js
+3. MoreDropdown.js
+4. MostLiked.js
+5. NavBar.js
+6. NotFound.js
+
 
 ## Design:
 <hr>
 
 ## wireframe
 
+my starter idea. the end results looks litle bit different.
+
 ![wireframe](/src/assets/wireframe.png)
 
 ## Color
+
+I choose this colors to get a more dark style and industrial feeling.
 
 ![coolors](/src/assets/the%20space.png)
 
@@ -343,13 +408,27 @@ In the Back-End I have started with a contact model.
 * [Cloudinary](https://cloudinary.com/)
 * [ElephantSQL](https://www.elephantsql.com/)
 * [Bootstrap](https://getbootstrap.com/)
+* [Font awesome](https://fontawesome.com/v5/search)
+
 
 ## Testing:
 <hr>
 
 ### [CSS Validator](https://jigsaw.w3.org/css-validator/)
 
+- All stylsheets were tested and this message was displayed for all test
+
+![css validation](/src/assets/cssvali.png)
+
 ### [HTML Validator](https://validator.w3.org/)
+
+- couldn't find any major bugs in 
+
+### Lighthouse testing:
+
+Tested allot on lighthouse. the main problem with the low performans is the size of the images. This i will work on for future Feutures.
+
+![lighthouse](/src/assets/Ska%CC%88rmavbild%202023-01-03%20kl.%2017.41.46.png)
 
 ### Manual testing:
 
@@ -357,8 +436,49 @@ In the Back-End I have started with a contact model.
 ## Bugs:
 <hr>
 
-Could not commit to github from github with readme.md file. Hade accedentaly made a change in github. so i hade to solve it by doing pull request.
+1. Could not commit to github from github with readme.md file. Hade accedentaly made a change in github. so i hade to solve it by doing pull request.
 
+2. Problems with getting the postpage to work. got error everytime. then i want back to my API and fined the issue. spelling misstake. post should be posts.
+
+3. problems with the icons.
+was to fast when writing. i forgot to write classname. (i hade only write class).
+
+
+## Deployment:
+
+<details><summary>Open to view the steps!</summary>
+<p>
+
+### Heroku deployment:
+- Launch the gitpod workspace.
+- Install ReactJS:
+npx create-react-app . --use-npm npm start
+
+- Install the packages using the command npm install:
+react-bootstrap@1.6.3 bootstrap@4.6.0 react-router-dom@5.3.0 axios react-infinite-scroll-component msw --save-dev jwt-decode -g eslint
+
+- Git add, commit, and push changes to gitpod.
+- Create the project app on Heroku, and link the GitHub repository by navigating to the 'Deploy' tab.
+
+### Connecting to the API:
+- Go to the Heroku app of the project DRF-API, and under the Settings tab, added the config vars (making sure trailing slash at the end has been removed on both):
+
+Key: CLIENT_ORIGIN | Value: Heroku app link Key: CLIENT_ORIGIN_DEV | Value: Gitpod link
+
+- Install the Axios package, and create supporting axiosDefaults.js as shown in the Moments Walkthrough.
+
+### Deploying to heroku:
+- In scripts section of package.json in gitpod, add command:
+"heroku-prebuild": "npm install -g serve",
+
+- Add Procfile to project root and populate with:
+web: serve -s build
+
+- Git add/commit/push
+- Deploy via deploy button in Heroku
+
+</p>
+</details>
 
 ## Credits:
 
