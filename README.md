@@ -359,6 +359,12 @@ Change password:
 ## Design:
 <hr>
 
+## skeleton / lucidchart:
+
+This i planed in the begining for the API, you can look more in the Backend Readme [here](https://github.com/EmmaRubiH/Portfolio-5-DRF)
+
+![lucid](/src/assets/lucid.png)
+
 ## wireframe
 
 my starter idea. the end results looks litle bit different.
@@ -423,6 +429,8 @@ In the Back-End I have started with a contact model.
 ### [HTML Validator](https://validator.w3.org/)
 
 - couldn't find any major bugs in 
+
+![htmlvali](/src/assets/htmlvalida.png)
 
 ### Lighthouse testing:
 
