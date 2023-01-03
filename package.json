@@ -46,6 +46,7 @@
     ]
   },
   "devDependencies": {
+    "jshint": "^2.13.6",
     "msw": "^0.35.0"
   }
 }

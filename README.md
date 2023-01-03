@@ -215,6 +215,154 @@ Here on the saved page, the user can view all their saved posts.
 
 ### Edit Post page :
 
+(logged in user)
+The user can see three dots on their own post. The user can select beetwen two icons, Edit and Delete.
+
+* Edit form contains:
+  * Image - Change image.
+  * Title input field
+  * Content input field
+  * Cancel button
+  * Save button
+
+<details><summary>Edit post page: screenshot</summary>
+<p>
+</p>
+</details>
+
+### Profile page:
+
+(logged in user)
+
+* Profile page contains:
+  * Profile text and Avatar image in navbar
+  * User profile details:
+    * Username
+    * Avatar image
+    * Following count
+    * Followers count
+    * Posts count
+    * Content bio
+    * Three dots icon - edit profile, change username and password.
+  * Text for users Posts
+  * User will see their own posts
+
+* List: Most followed profiles
+* List: Most liked posts
+
+<details><summary>Profile page: screenshot</summary>
+<p>
+</p>
+</details>
+
+### Edit Profile page:
+
+Edit profile:
+* Image
+* Change image button
+* Bio text input field
+* Cancel button
+* Saved button
+
+Change username:
+* Title: change username
+* Current username
+* Cancel button
+* Save Button
+
+Change password:
+* Title: New password
+  * new password input field
+* Title: confirm password
+  * confirm password field
+* Cancel button
+* Save button
+
+<details><summary>Edit profile: screenshot</summary>
+<p>
+</p>
+</details>
+
+<details><summary>Change username: screenshot</summary>
+<p>
+</p>
+</details>
+
+<details><summary>Change password: screenshot</summary>
+<p>
+</p>
+</details>
+
+## Design:
+<hr>
+
+## wireframe
+
+![wireframe](/src/assets/wireframe.png)
+
+## Color
+
+![coolors](/src/assets/the%20space.png)
+
+## images:
+ * [unsplash](https://unsplash.com/s/photos/portrait)
+  * [pexels](https://www.pexels.com/sv-se/)
+
+## Future Features:
+<hr>
+
+Futur features for user is a contact page. Where the users can contact each other.
+The idea is to include a users contact page with an contact list inside.
+There will be a message form, that will look like a chat-forum. 
+In the Back-End I have started with a contact model.
+
+* To have videos to be posted.
+
+* Delete users profile.
+
+## Languages:
+<hr>
+
+* Python
+* CSS
+* HTML
+* JavaScript
+
+### Technologies, frameworks and libraries:
+
+* [React](https://reactjs.org/)
+* [React-Bootstrap](https://react-bootstrap-v4.netlify.app/)
+* [Django](https://www.djangoproject.com/)
+* [Github](https://github.com/)
+* [Gitpod](https://www.gitpod.io/)
+* [Heroku](https://id.heroku.com/login)
+* [Stackoverflow](https://stackoverflow.com/)
+* [Balsamiq](https://balsamiq.com/wireframes/desktop/)
+* [Cloudinary](https://cloudinary.com/)
+* [ElephantSQL](https://www.elephantsql.com/)
+* [Bootstrap](https://getbootstrap.com/)
+
+## Testing:
+<hr>
+
+### [CSS Validator](https://jigsaw.w3.org/css-validator/)
+
+### [HTML Validator](https://validator.w3.org/)
+
+### Manual testing:
+
+
+## Bugs:
+<hr>
+
+Could not commit to github from github with readme.md file. Hade accedentaly made a change in github. so i hade to solve it by doing pull request.
+
+
+## Credits:
+
+* I used the "Moments" walkthrough project to start with. I used the walkthrough codes as a base, and then add my feutures on top of it. 
+* Stackoverflow was a big help. could fined wery helpful codes and oldproblems like i hade.
+* I got very good help from my mentor Jubril, and on slack.
 
 
 
