@@ -1,5 +1,7 @@
 # THE SPACE 
 
+![amiresponsive](/src/assets/Ska%CC%88rmavbild%202023-01-03%20kl.%2015.08.35.png)
+
 The space is a online blog, styled media platform. Where the users can create a profile and post their images along with a title and content. 
 Users on this site can also view other users profiles. A user can comment, like and favorite (star) them.
 This platform is designed to provide a  online community as users interact with each others post.
