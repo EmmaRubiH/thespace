@@ -19,8 +19,9 @@
 .Brand {
     font-size: 3rem;
     text-transform: uppercase;
-    letter-spacing: 10px;
+    letter-spacing: 8px;
     color: white;
+    font-family: 'Poiret One';
     
 }
 

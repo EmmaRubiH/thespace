@@ -12,7 +12,7 @@ import { axiosReq } from "../../api/axiosDefaults";
 import Post from "./Post";
 import Asset from "../../components/Asset";
 
-import NoResults from "../../assets/no-results.png";
+import NoResults from "../../assets/sorry.jpeg";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { fetchMoreData } from "../../utils/utils";
 import PopularProfiles from "../profiles/PopularProfiles";
@@ -83,7 +83,7 @@ function PostsPage({ message, filter = ""}) {
                 next={() => fetchMoreData(posts, setPosts)}
                 />
             ) : (
-                <Container className={appStyles.Content}>
+                <Container className={appStyles.Contentedit}>
                     <Asset src={NoResults} message={message} />
                 </Container>
             )}

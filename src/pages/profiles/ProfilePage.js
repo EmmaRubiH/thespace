@@ -23,7 +23,7 @@ import Image from "react-bootstrap/Image";
 import InfiniteScroll from "react-infinite-scroll-component";
 import Post from "../posts/Post";
 import { fetchMoreData } from "../../utils/utils";
-import NoResults from "../../assets/no-results.png";
+import NoResults from "../../assets/sorry.jpeg";
 import { ProfileEditDropdown } from "../../components/MoreDropdown";
 import PopularPosts from "../posts/PopularPosts";
 
@@ -83,7 +83,7 @@ function ProfilePage() {
               <div>{profile?.followers_count}</div>
               <div>followers</div>
             </Col>
-            <Col xs={3} className="my-2">
+            <Col xs={4} className="my-2">
               <div>{profile?.following_count}</div>
               <div>following</div>
             </Col>
