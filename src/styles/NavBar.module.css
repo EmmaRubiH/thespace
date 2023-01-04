@@ -2,14 +2,11 @@
     background-color: #323232;
     border: 1px solid #323232;
     padding-top: 50px;
-    
-    
 }
 
 .NavLink {
     padding: 5px;
-    color: white!important;
-   
+    color: white !important;
 }
 
 .Active i {
@@ -22,6 +19,4 @@
     letter-spacing: 8px;
     color: white;
     font-family: 'Poiret One';
-    
 }
-

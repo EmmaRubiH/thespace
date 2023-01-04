@@ -16,7 +16,7 @@ const NavBar = () => {
     const currentUser = useCurrentUser();
     const setCurrentUser = useSetCurrentUser();
 
-    const {expanded, setExpanded, ref} = useClickOutsideToggle();
+    const { expanded, setExpanded, ref } = useClickOutsideToggle();
 
     const handleSignOut = async () => {
         try {
@@ -39,8 +39,8 @@ const NavBar = () => {
     );
 
     const loggedInIcons = (
-    <>
-        <NavLink
+        <>
+            <NavLink
                 className={styles.NavLink}
                 activeClassName={styles.Active}
                 to="/feed"
@@ -57,13 +57,13 @@ const NavBar = () => {
             <NavLink
                 className={styles.NavLink}
                 activeClassName={styles.Active}
-                to="/populared"    
+                to="/populared"
             >
                 <i className="fa-solid fa-thumbtack"></i>Saved
             </NavLink>
-            <NavLink 
-                className={styles.NavLink} 
-                to="/" 
+            <NavLink
+                className={styles.NavLink}
+                to="/"
                 onClick={handleSignOut}>
 
                 <i className="fas fa-sign-out-alt"></i>Sign out
@@ -74,7 +74,7 @@ const NavBar = () => {
             >
                 <Avatar src={currentUser?.profile_image} text="Profile" height={40} />
             </NavLink>
-    </>
+        </>
     );
     const loggedOutIcons = (
         <>
@@ -98,41 +98,41 @@ const NavBar = () => {
     return (
         <Navbar expanded={expanded} className={styles.NavBar} expand="md" variant="dark">
             <Container className="d-flex flex-column">
-                
-            <Row>
-                <Col>
-                <NavLink to="/">
-                    <Navbar.Brand className={styles.Brand}>
-                        The Space
-                    </Navbar.Brand>
-                    </NavLink>
-                    </Col>
-            </Row>
-                   
-                
-            <Row>
-                {currentUser && addPostIcon}
-                <Navbar.Toggle 
-                    ref={ref}
-                    onClick={() => setExpanded(!expanded)} 
-                    aria-controls="basic-navbar-nav" />
-                <Navbar.Collapse id="basic-navbar-nav" >
-                    <Nav className="ml-auto text-left">
-                        <NavLink
-                            exact
-                            className={styles.NavLink}
-                            activeClassName={styles.Active}
-                            to="/"
-                        >
-                            <i className="fas fa-home"></i>Home
-                        </NavLink>
-                        {currentUser ? loggedInIcons : loggedOutIcons}
 
-                    </Nav>
-                </Navbar.Collapse>
-               
+                <Row>
+                    <Col>
+                        <NavLink to="/">
+                            <Navbar.Brand className={styles.Brand}>
+                                The Space
+                            </Navbar.Brand>
+                        </NavLink>
+                    </Col>
                 </Row>
-                
+
+
+                <Row>
+                    {currentUser && addPostIcon}
+                    <Navbar.Toggle
+                        ref={ref}
+                        onClick={() => setExpanded(!expanded)}
+                        aria-controls="basic-navbar-nav" />
+                    <Navbar.Collapse id="basic-navbar-nav" >
+                        <Nav className="ml-auto text-left">
+                            <NavLink
+                                exact
+                                className={styles.NavLink}
+                                activeClassName={styles.Active}
+                                to="/"
+                            >
+                                <i className="fas fa-home"></i>Home
+                            </NavLink>
+                            {currentUser ? loggedInIcons : loggedOutIcons}
+
+                        </Nav>
+                    </Navbar.Collapse>
+
+                </Row>
+
             </Container>
         </Navbar>
     );

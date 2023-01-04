@@ -107,6 +107,10 @@ This platform is designed to provide a  online community as users interact with 
 </p>
 </details>
 
+I have also linked my user stories to a kanban board to make them easier to work on you can find the link [here](https://github.com/users/EmmaRubiH/projects/10)
+<br>
+
+
 ## Strategy:
 <hr>
 
@@ -440,6 +444,92 @@ Tested allot on lighthouse. the main problem with the low performans is the size
 
 ### Manual testing:
 
+| HomePage     | Testing |
+|-------------:|---------|
+| LogIn/LogOut |  < ok >  |
+| NavBar view  |  < ok >  |
+| Assets spinner loads when post fetched | < ok > |
+| Post render correctly | < ok > |
+
+| Sign Up | Testing |
+|---------:|---------|
+| error alerts are displayed | < ok > |
+| Form is submitted when details are correct | < ok > |
+| Manual tested and can confirm API works correct | < ok > |
+| When submitted user redirected to sign in page | < ok > |
+
+| Sign In | Testing |
+|----------:|--------|
+| User is logged in when username/password match data in database | < ok > |
+| error alert are displayed | < ok > |
+| when logged in correctly, user is directed back to homepage | < ok > |
+
+| Feed | Testing |
+|------:|--------|
+| Only the posts the profile follow are rendered | < ok >  |
+| Post are rendered most recent one | < ok > |
+| infinite scrolling | < ok > |
+| The users post is not showing | < ok > |
+| clicking follow/unfollow, user need to refresh page to see new update | < ok > | 
+
+| Liked | Testing |
+|-------:|--------|
+| When clicking Likes and saved, only post belonging to user rendered | < ok > |
+| Recent posts are render correctly | < ok > |
+| infinite scrolling | < ok > |
+| The users posts are not viewing | < ok > |
+| clicking follow/unfollow, user need to refresh page to see new update | < ok > | 
+| When clicking like/unlike on one of the Most Liked Posts on the side, the Liked feed does NOT automatically refresh. It requires the user to refresh the page | Future feuteres |
+
+| Saved | Testing |
+|-------:|--------|
+| clicking Bookmarks, only posts bookmarked by the user are rendered | < ok > |
+| Recent posts are render correctly | < ok > |
+| infinite scrolling | < ok > |
+| The users posts are not viewing | < ok > |
+
+| Profile | Testing |
+|-------:|--------|
+| clicking Profile Avatar or Username, the user is redirected to the Profile page | < ok > |
+| Profile details are displayed correct. avatar, username , posts , followers, following | < ok > |
+| infinite scrolling | < ok > |
+| user can delete or edit their own posts| < ok > |
+
+| profile edit | Testing |
+|-------:|--------|
+| Tre dots- edit profile, change username/password | < ok > |
+| change image | < ok > |
+| change username | < ok > |
+| change password | < ok > |
+
+| Add post | Testing |
+|-------:|--------|
+| clicking Create Post, the logged in user is correctly directed to the Create Post | < ok > |
+| Form not working if you have no title or image | < ok > |
+| error alert work correctly | < ok > |
+| user need to be login | < ok > |
+
+| Edit/Delete post | Testing |
+|-------:|--------|
+| Tre dots- edit works | < ok > |
+| post can be edited | < ok > |
+| Delete post works | < ok > |
+| change image | < ok > |
+| user need to be logged in | < ok > |
+| alert messege when deleting | Future feutures |
+
+| Search | Testing |
+|-------:|--------|
+| search function works | < ok > |
+| search deleyed a few secound | < ok > |
+| If no matches are found - the No results are displayed | < ok > |
+
+| Sign out | Testing |
+|-------:|--------|
+| link works correctly and re-directs us to the original Home Page | < ok > | 
+
+
+
 
 ## Bugs:
 <hr>
@@ -490,6 +580,7 @@ web: serve -s build
 
 ## Credits:
 
+* [Web Dev Simplified](https://www.youtube.com/@WebDevSimplified) - followed this site to learn more about react.
 * I used the "Moments" walkthrough project to start with. I used the walkthrough codes as a base, and then add my feutures on top of it. 
 * Stackoverflow was a big help. could fined wery helpful codes and oldproblems like i hade.
 * I got very good help from my mentor Jubril, and on slack.

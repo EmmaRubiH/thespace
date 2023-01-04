@@ -54,22 +54,22 @@ function PostCreateForm() {
     const handleSubmit = async (event) => {
         event.preventDefault();
         const formData = new FormData();
-    
+
         formData.append("title", title);
         formData.append("content", content);
         formData.append("image", imageInput.current.files[0]);
-    
+
         try {
             const { data } = await axiosReq.post("/posts/", formData);
             history.push(`/posts/${data.id}`);
-            } catch (err) {
+        } catch (err) {
             // console.log(err);
-                if (err.response?.status !== 401) {
-                    setErrors(err.response?.data);
-                }
+            if (err.response?.status !== 401) {
+                setErrors(err.response?.data);
             }
-        };
-      
+        }
+    };
+
 
     const textFields = (
         <div className="text-center">
@@ -91,18 +91,18 @@ function PostCreateForm() {
             <Form.Group>
                 <Form.Label>Content</Form.Label>
                 <Form.Control
-                type="textarea"
-                placeholder=""
-                rows={6}
-                name="content"
-                value={content}
-                onChange={handleChange}
+                    type="textarea"
+                    placeholder=""
+                    rows={6}
+                    name="content"
+                    value={content}
+                    onChange={handleChange}
                 />
             </Form.Group>
             {errors.content?.map((message, idx) => (
-                        <Alert key={idx} variant="dark" className="mt-3">
-                            {message}
-                        </Alert>
+                <Alert key={idx} variant="dark" className="mt-3">
+                    {message}
+                </Alert>
             ))}
 
             <Button
@@ -114,7 +114,7 @@ function PostCreateForm() {
             <Button className={`${btnStyles.Button} ${btnStyles.White}`} type="submit">
                 create
             </Button>
-            
+
         </div>
     );
 
@@ -164,7 +164,7 @@ function PostCreateForm() {
                             <Alert variant="info" key={idx}>
                                 <p>Please upload an image to continue!</p>
                             </Alert>
-                         ))}
+                        ))}
                         <div className="d-md-none">{textFields}</div>
                     </Container>
                 </Col>

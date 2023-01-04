@@ -18,29 +18,29 @@ import PopularProfiles from "../profiles/PopularProfiles";
 import PopularPosts from "./PopularPosts";
 
 function PostPage() {
-    const { id } = useParams();
-    const [post, setPost] = useState({ results: [] });
+  const { id } = useParams();
+  const [post, setPost] = useState({ results: [] });
 
-    const currentUser = useCurrentUser();
-    const profile_image = currentUser?.profile_image;
-    const [comments, setComments] = useState({ results: [] });
+  const currentUser = useCurrentUser();
+  const profile_image = currentUser?.profile_image;
+  const [comments, setComments] = useState({ results: [] });
 
-    useEffect(() => {
-      const handleMount = async () => {
-        try {
-          const [{ data: post }, { data: comments }] = await Promise.all([
-            axiosReq.get(`/posts/${id}`),
-            axiosReq.get(`/comments/?post=${id}`),
-          ]);
-          setPost({ results: [post] });
-          setComments(comments);
-        } catch (err) {
-          // console.log(err);
-        }
-      };
-  
-      handleMount();
-    }, [id]);
+  useEffect(() => {
+    const handleMount = async () => {
+      try {
+        const [{ data: post }, { data: comments }] = await Promise.all([
+          axiosReq.get(`/posts/${id}`),
+          axiosReq.get(`/comments/?post=${id}`),
+        ]);
+        setPost({ results: [post] });
+        setComments(comments);
+      } catch (err) {
+        // console.log(err);
+      }
+    };
+
+    handleMount();
+  }, [id]);
 
 
   return (
@@ -50,27 +50,27 @@ function PostPage() {
         <PopularPosts mobile />
         <Post {...post.results[0]} setPosts={setPost} postPage />
         <Container className={appStyles.Contentfix}>
-        {currentUser ? (
-          <CommentCreateForm
-          profile_id={currentUser.profile_id}
-          profileImage={profile_image}
-          post={id}
-          setPost={setPost}
-          setComments={setComments}
-        />
-        ) : comments.results.length ? (
-          "Comments"
-        ) : null}
-        {comments.results.length ? (
-          <InfiniteScroll
-            children={comments.results.map((comment) => (
-              <Comment 
-                key={comment.id} 
-                {...comment}
-                setPost={setPost}
-                setComments={setComments}
+          {currentUser ? (
+            <CommentCreateForm
+              profile_id={currentUser.profile_id}
+              profileImage={profile_image}
+              post={id}
+              setPost={setPost}
+              setComments={setComments}
+            />
+          ) : comments.results.length ? (
+            "Comments"
+          ) : null}
+          {comments.results.length ? (
+            <InfiniteScroll
+              children={comments.results.map((comment) => (
+                <Comment
+                  key={comment.id}
+                  {...comment}
+                  setPost={setPost}
+                  setComments={setComments}
                 />
-            ))}
+              ))}
               dataLength={comments.results.length}
               loader={<Asset spinner />}
               hasMore={!!comments.next}

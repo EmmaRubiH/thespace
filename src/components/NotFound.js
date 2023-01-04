@@ -6,10 +6,10 @@ import Asset from './Asset';
 const NotFound = () => {
   return (
     <div className={styles.NotFound}>
-        <Asset
-            src={NoResults}
-            message={`Sorry, the page doesn't exist`}
-        />
+      <Asset
+        src={NoResults}
+        message={`Sorry, the page doesn't exist`}
+      />
 
     </div>
   )
