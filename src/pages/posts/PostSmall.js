@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { useCurrentUser } from '../../contexts/CurrentUserContext';
 import styles from "../../styles/ProfilePost.module.css";
 import MostLiked from '../../components/MostLiked';

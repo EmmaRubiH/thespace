@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
 import { Container } from 'react-bootstrap';
 import { axiosReq } from '../../api/axiosDefaults';
 import appStyles from "../../App.module.css";
@@ -8,13 +8,13 @@ import PostSmall from './PostSmall';
 
 const PopularPosts = (props) => {
     const { mobile, setPosts } = props;
-    console.log(props)
+    console.log(props);
     const [postData, setPostData] = useState({
         pagePost: { results: [] },
         popularPosts: { results: [] },
     });
     const { popularPosts } = postData;
-    const currentUser = useCurrentUser()
+    const currentUser = useCurrentUser();
 
     useEffect(() => {
         const handleMount = async () => {
@@ -29,8 +29,8 @@ const PopularPosts = (props) => {
             } catch (err) {
                 // console.log(err)
             }
-        }
-        handleMount()
+        };
+        handleMount();
     }, [currentUser]);
 
     return (

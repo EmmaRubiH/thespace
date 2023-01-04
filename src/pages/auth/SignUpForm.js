@@ -10,7 +10,7 @@ import axios from "axios";
 import { useRedirect } from "../../hooks/useRedirect";
 
 const SignUpForm = () => {
-    useRedirect('loggedIn')
+    useRedirect('loggedIn');
 
     const [signUpData, setSignUpData] = useState({
         username: "",

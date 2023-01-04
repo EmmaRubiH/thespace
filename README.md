@@ -12,6 +12,14 @@ This platform is designed to provide a  online community as users interact with 
 
 [DEPLOYED Back-end github repository](https://github.com/EmmaRubiH/Portfolio-5-DRF)
 
+## Project Goals:
+<hr>
+Design an interactive Front-End web application using HTML, CSS and advanced JavaScript, based on component composition.
+Create an Application Programming Interface (current repository) for comsumption by 3rd party applications.
+Create Unique models.
+Create an Interactive Front-End application that consumes API data.
+
+
 ## User Stories:
 
 ### User Goals:
@@ -435,6 +443,13 @@ In the Back-End I have started with a contact model.
 - couldn't find any major bugs in 
 
 ![htmlvali](/src/assets/htmlvalida.png)
+
+### [JSHint](https://jshint.com/)
+
+No errors, but 2 warnings.
+
+![jshint](/src/assets/jshint.png)
+
 
 ### Lighthouse testing:
 
